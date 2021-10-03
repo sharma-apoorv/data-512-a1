@@ -14,6 +14,7 @@ The following is the structure of the directory and files present:
 ```
 .
 ├── README.md
+├── requirements.txt
 ├── data
     ├── raw
         ├── pagecounts_desktop-site_200712-201608.json
@@ -65,6 +66,35 @@ The following chart was generated after collecting and processing the data:
 ## Important notes
 * As much as possible, we're interested in organic (user) traffic, as opposed to traffic by web crawlers or spiders. The Pageview API (but not the Pagecount API) allows you to filter by agent=user. Thus, we filter by `user` in the Pageview API.
 * There was about 1 year of overlapping traffic data between the two APIs. We gather and graph data from both the API's, including the overlapping period
+
+## Dependencies
+
+[Anaconda](https://www.anaconda.com/) was used to maintain and install project dependencies. Additionally, a [requirements.txt](https://github.com/sharma-apoorv/data-512-a1/blob/main/requirements.txt) file has been provided to install all dependencies used in the notebook. 
+
+## Usage
+
+The repo can be cloned using the following command:
+```
+git clone https://github.com/sharma-apoorv/data-512-a1.git
+```
+
+The dependencies can be installed into an environment using the following command:
+```
+conda create --name <envname> --file requirements.txt
+```
+
+The environment is activated as follows:
+```
+conda activate <envname>
+```
+
+Lastly, the jupyter notebook kernel can be started using the following command:
+```
+jupyter-notebook
+```
+
+Executing the above command will open a link in the browser. Navigate to the notebook and click on "Run All" in the notebook to execute the commands.
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.md` for more information.
